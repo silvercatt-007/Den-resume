@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Резюме Ильин Денис Николаевич - Кладовщик с опытом 15+ лет">
+    <meta name="author" content="Ильин Денис Николаевич">
+    <title>Ильин Денис Николаевич - Резюме Кладовщик</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95em;
+        }
+
+        .contact-item svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #1e3c72;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* Profile Section */
+        .profile {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+
+        .profile p {
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        /* Experience Timeline */
+        .experience-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+            border-left: 2px solid #e0e0e0;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2a5298;
+        }
+
+        .experience-item h3 {
+            color: #1e3c72;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .experience-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .experience-item ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .experience-item li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 3px solid #2a5298;
+        }
+
+        .skill-category h4 {
+            color: #1e3c72;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-category li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+            font-weight: bold;
+        }
+
+        /* Cover Letter */
+        .cover-letter {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .cover-letter h3 {
+            color: #1e3c72;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cover-letter p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .cover-letter strong {
+            color: #1e3c72;
+        }
+
+        /* Qualities */
+        .qualities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .quality-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .quality-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .quality-item strong {
+            color: #1e3c72;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Call to Action */
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            border-radius: 8px;
+        }
+
+        .cta h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e3c72;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .cta, .cta-button {
+                display: none;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .header .subtitle {
+                font-size: 1.1em;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .content {
+                padding: 30px 20px;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .qualities {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Ильин Денис Николаевич</h1>
+            <div class="subtitle">Кладовщик | 15+ лет опыта с ТМЦ</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <a href="mailto:9171717771@mail.ru" style="color: white; text-decoration: none;">9171717771@mail.ru</a>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>+7 917 171-77-71</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Астрахань</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+                    <span>04.02.1985 (40 лет)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Profile -->
+            <div class="section">
+                <h2 class="section-title">Профессиональный профиль</h2>
+                <div class="profile">
+                    <p><strong>Опытный специалист складской логистики</strong> с 15-летним стажем работы с товарно-материальными ценностями. Прошёл путь от кладовщика крупного склада до специалиста по снабжению. Владею полным циклом складских операций: приёмка, размещение, учёт, инвентаризации, документооборот.</p>
+                    <p style="margin-top: 15px;"><strong>Готов к вахтовому методу работы 60/30.</strong> Имею высшее образование в области прикладной информатики в экономике (МЭСИ), что даёт глубокое понимание систем учёта и автоматизации складских процессов.</p>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <h2 class="section-title">Опыт работы</h2>
+                
+                <div class="experience-item">
+                    <h3>Специалист отдела снабжения</h3>
+                    <div class="experience-meta">Автосервис, г. Астрахань | 2017 – настоящее время (8 лет)</div>
+                    <ul>
+                        <li>Организация снабжения: подбор, заказ и закупка автозапчастей, расходных материалов</li>
+                        <li>Работа с поставщиками: переговоры, заключение договоров, контроль сроков</li>
+                        <li>Складской учёт: приёмка ТМЦ, проверка качества, оформление документов</li>
+                        <li>Документооборот: накладные, акты, сертификаты, ведение электронного учёта</li>
+                        <li>Участие в инвентаризациях, сверка фактических остатков с данными учёта</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Достижения:</strong> Оптимизировал систему поставок, сократив время простоя производства. Создал базу надёжных поставщиков с выгодными условиями.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Кладовщик</h3>
+                    <div class="experience-meta">ИП Бинеев М.Ш. | Крупный склад автозапчастей, г. Астрахань | 2007 – 2016 (9 лет)</div>
+                    <ul>
+                        <li>Приёмка поступающих товарно-материальных ценностей от поставщиков</li>
+                        <li>Проверка соответствия фактического количества и качества товара документам</li>
+                        <li>Размещение ТМЦ на складе с учётом номенклатуры, габаритов и условий хранения</li>
+                        <li>Поиск и выдача деталей по заявкам клиентов и сервисных мастерских</li>
+                        <li>Работа с номенклатурой: изучение каталогов, артикулов, характеристик деталей</li>
+                        <li>Участие в инвентаризациях, подсчёт и сверка остатков</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <h2 class="section-title">Профессиональные навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Складское хозяйство</h4>
+                        <ul>
+                            <li>15+ лет опыта с ТМЦ</li>
+                            <li>Приёмка, хранение, отгрузка</li>
+                            <li>Инвентаризации</li>
+                            <li>Организация складского пространства</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Компьютерные программы</h4>
+                        <ul>
+                            <li>1С: Склад / Торговля</li>
+                            <li>Microsoft Excel (формулы, сводные)</li>
+                            <li>Microsoft Word</li>
+                            <li>Базы данных</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Работа с документами</h4>
+                        <ul>
+                            <li>Товарные накладные</li>
+                            <li>Акты, паспорта, сертификаты</li>
+                            <li>Приходные/расходные документы</li>
+                            <li>Отчёты по остаткам</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Технические навыки</h4>
+                        <ul>
+                            <li>Подбор по VIN-номеру</li>
+                            <li>Работа с каталогами</li>
+                            <li>Электронные базы поставщиков</li>
+                            <li>Взаимозаменяемость деталей</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <h2 class="section-title">Образование</h2>
+                <div class="experience-item">
+                    <h3>Высшее образование</h3>
+                    <div class="experience-meta">МЭСИ (Московский государственный университет экономики, статистики и информатики) | 2002 – 2009</div>
+                    <p><strong>Специальность:</strong> Прикладная информатика в экономике</p>
+                </div>
+            </div>
+
+            <!-- Personal Qualities -->
+            <div class="section">
+                <h2 class="section-title">Личные качества</h2>
+                <div class="qualities">
+                    <div class="quality-item">
+                        <strong>Ответственный</strong>
+                        <span>Всегда выполняю задачи в срок</span>
+                    </div>
+                    <div class="quality-item">
+                        <strong>Пунктуальный</strong>
+                        <span>Соблюдаю дедлайны</span>
+                    </div>
+                    <div class="quality-item">
+                        <strong>Внимательный</strong>
+                        <span>К деталям в документах</span>
+                    </div>
+                    <div class="quality-item">
+                        <strong>Коммуникабельный</strong>
+                        <span>Легко нахожу общий язык</span>
+                    </div>
+                    <div class="quality-item">
+                        <strong>Стрессоустойчивый</strong>
+                        <span>Спокоен в напряжённых ситуациях</span>
+                    </div>
+                    <div class="quality-item">
+                        <strong>Обучаемый</strong>
+                        <span>Быстро осваиваю новое</span>
+                    </div>
+                    <div class="quality-item">
+                        <strong>Физически вынослив</strong>
+                        <span>Готов к работе с грузами</span>
+                    </div>
+                    <div class="quality-item">
+                        <strong>Целеустремлённый</strong>
+                        <span>Нацелен на результат</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cover Letter Section -->
+            <div class="cover-letter">
+                <h3>Сопроводительное письмо для ООО «ГСП Ремонт»</h3>
+                
+                <p>С большим интересом ознакомился с вашей вакансией кладовщика на вахтовый метод работы 60/30. Хотел бы пояснить, почему считаю себя подходящим кандидатом для вашей компании.</p>
+
+                <p><strong>Опыт и квалификация.</strong> У меня 15 лет практического опыта работы с товарно-материальными ценностями в складской логистике и снабжении. Начинал кладовщиком на крупном складе автозапчастей, где получил фундаментальные знания складских процессов. Последние 8 лет работаю специалистом по снабжению в автосервисе, где отвечаю за полный цикл: от закупки материалов до их выдачи производству.</p>
+
+                <p><strong>Технические навыки.</strong> Владею программами, указанными в требованиях вакансии: 1С (Склад/Торговля), Microsoft Excel, Word. Имею высшее образование в области прикладной информатики в экономике, что даёт мне хорошее понимание систем учёта и автоматизации.</p>
+
+                <p><strong>Готовность к новой отрасли.</strong> Понимаю, что номенклатура материалов в нефтегазовой отрасли отличается от автомобильной, но принципы складского учёта универсальны. Мой опыт работы с большим объёмом номенклатуры (тысячи позиций) позволяет мне уверенно заявить: я готов в короткие сроки изучить специфику ваших материалов.</p>
+
+                <p><strong>Готовность к вахтовому методу.</strong> Я полностью осознаю специфику вахтового метода работы 60/30. Это взвешенное решение, которое я принял после обсуждения с семьёй. Психологически готов к длительному пребыванию вдали от дома и работе в коллективе на вахтовом посёлке.</p>
+
+                <p><strong>Почему ООО «ГСП Ремонт»?</strong> Ваша компания — это стабильная организация с многолетним опытом реализации проектов ПАО «Газпром». Для меня это возможность применить свой опыт в крупной профессиональной команде и получить новый опыт работы в нефтегазовой отрасли.</p>
+
+                <p style="margin-top: 20px; text-align: center;"><em>Готов пройти медицинскую комиссию и приступить к работе в удобные для компании сроки.</em></p>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta">
+                <h3>Готов к обсуждению</h3>
+                <p>Буду рад возможности лично обсудить моё резюме на собеседовании</p>
+                <a href="tel:+79171717771" class="cta-button">Связаться со мной</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 Ильин Денис Николаевич | Резюме создано: 11 ноября 2025</p>
+            <p style="margin-top: 5px; font-size: 0.85em;">Готовность к вахтовому методу 60/30 | Водительские права: B, C</p>
+        </div>
+    </div>
+</body>
+</html>
